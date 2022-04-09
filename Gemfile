@@ -34,6 +34,13 @@ gem "jbuilder"
 # gem "bcrypt", "~> 3.1.7"
 gem "devise"
 
+# image uploads to Amazon S3
+gem 'carrierwave', '~> 2.0'
+gem 'fog', '~> 1.38'
+
+# image resizing
+gem "mini_magick"
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
@@ -56,6 +63,8 @@ group :development do
   # gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+  gem "spring"
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem "figaro"
 end
 

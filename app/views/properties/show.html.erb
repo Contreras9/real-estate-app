@@ -1,10 +1,26 @@
-<p style="color: green"><%= notice %></p>
+<p>
+  <strong>Name:</strong>
+  <%= @property.name %>
+</p>
 
-<%= render @property %>
+<p>
+  <strong>Address:</strong>
+  <%= @property.address %>
+</p>
 
-<div>
-  <%= link_to "Edit this property", edit_property_path(@property) %> |
-  <%= link_to "Back to properties", properties_path %>
+<p>
+  <strong>Price:</strong>
+  <%= @property.price %>
+</p>
 
-  <%= button_to "Destroy this property", @property, method: :delete %>
-</div>
+<p>
+  <strong>Rooms:</strong>
+  <%= @property.rooms %>
+</p>
+
+<p>
+  <strong>Bathrooms:</strong>
+  <%= @property.bathrooms %>
+</p>
+
+  <%= link_to "Edit property", edit_property_path(@property), class: "btn btn-success" %>
